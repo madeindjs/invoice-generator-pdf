@@ -14,10 +14,14 @@
     "type": "git",
     "url": "https://github.com/madeindjs/invoice-generator-pdf"
   },
+  "funding": {
+    "type": "liberapay",
+    "url": "https://en.liberapay.com/alexandre_rousseau/"
+  },
   "main": "index.js",
   "type": "module",
   "license": "ISC",
-  "version": "1.0.3",
+  "version": "1.1.0",
   "scripts": {
     "cli": "node cli.mjs",
     "dev": "node --watch cli.mjs example.json",
