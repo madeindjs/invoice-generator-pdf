@@ -1,4 +1,4 @@
-# Invoice Generator
+# Invoice Generator PDF
 
 Generate PDF invoice using [PDFMake](https://www.npmjs.com/package/pdfmake) from JSON definition.
 
@@ -31,7 +31,7 @@ You need to defined as a JSON file like [this example](./example.json)
 ... and run the script
 
 ```sh
-invoice-generator example.json
+invoice-generator-pdf example.json
 # or for local testing
 npm run cli example.json
 ```
