@@ -10,10 +10,14 @@
     "name": "Alexandre Rousseau",
     "url": "https://rsseau.fr"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/madeindjs/invoice-generator-pdf"
+  },
   "main": "index.js",
   "type": "module",
   "license": "ISC",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "scripts": {
     "cli": "node cli.mjs",
     "dev": "node --watch cli.mjs example.json",
