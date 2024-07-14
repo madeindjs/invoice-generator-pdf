@@ -1,0 +1,26 @@
+{
+  "name": "invoice-generator",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "cli": "node cli.mjs",
+    "dev": "node --watch cli.mjs example.json",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "pdf",
+    "invoice"
+  ],
+  "bin": {
+    "invoice-generator": "./cli.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "dayjs": "^1.11.11",
+    "jsonschema": "^1.4.1",
+    "pdfmake": "^0.2.10"
+  }
+}
