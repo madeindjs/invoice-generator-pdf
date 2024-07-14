@@ -17,7 +17,7 @@
   "main": "index.js",
   "type": "module",
   "license": "ISC",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "scripts": {
     "cli": "node cli.mjs",
     "dev": "node --watch cli.mjs example.json",
