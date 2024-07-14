@@ -17,14 +17,14 @@
   "main": "index.js",
   "type": "module",
   "license": "ISC",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "scripts": {
     "cli": "node cli.mjs",
     "dev": "node --watch cli.mjs example.json",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "bin": {
-    "invoice-generator": "./cli.mjs"
+    "invoice-generator-pdf": "./cli.mjs"
   },
   "dependencies": {
     "dayjs": "^1.11.11",
