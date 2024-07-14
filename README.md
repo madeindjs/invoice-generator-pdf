@@ -1,5 +1,7 @@
 # Invoice Generator PDF
 
+[![npm version](https://badge.fury.io/js/invoice-generator-pdf.svg)](https://badge.fury.io/js/invoice-generator-pdf)
+
 Generate PDF invoice using [PDFMake](https://www.npmjs.com/package/pdfmake) from JSON definition.
 
 You need to defined as a JSON file like [this example](./example.json)
