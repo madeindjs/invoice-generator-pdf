@@ -2,6 +2,7 @@ import dayjs from "dayjs";
 import { validate } from "jsonschema";
 import { createWriteStream } from "node:fs";
 import PdfMake from "pdfmake";
+import pkg from "./package.json" with { type: "json" };
 import jsonSchema from "./schema.json" with { type: "json" };
 
 /**
@@ -32,6 +33,14 @@ export function exportToPDF(data, path) {
   const marginSeparator = 10;
 
   const pdfDoc = printer.createPdfKitDocument({
+    info: {
+      author: `${data.me.name} <${data.me.email}>`,
+      creationDate: new Date(),
+      title: `${data.id}`,
+      subject: `Invoice for ${data.recipient.name}: ${data.id}`,
+      producer: `${pkg.name} v${pkg.version} <${pkg.repository.url}>`,
+      keywords: `Invoice, ${data.recipient.name}, ${data.id}`,
+    },
     content: [
       // My personal informations
       [
