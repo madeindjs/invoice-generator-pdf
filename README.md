@@ -30,7 +30,13 @@ You need to defined as a JSON file like [this example](./example.json)
 }
 ```
 
-... and run the script
+It will generate a PDF like [the following example](./example.json.pdf).
+
+> You can check the complete JSON schema [here](./schema.json).
+
+## Usage
+
+### CLI
 
 ```sh
 invoice-generator-pdf example.json
@@ -38,8 +44,15 @@ invoice-generator-pdf example.json
 npm run cli example.json
 ```
 
-It will generate a PDF like [the following example](./example.json.pdf).
+### API
 
-You can check the complete JSON schema [here](./schema.json).
+```js
+import { exportToPDF } from "invoice-generator-pdf";
 
-DISCLAIMER: this tool is mainly for my own purpose.
+await exportToPDF(
+  {
+    /* your conf */
+  },
+  "./out.pdf"
+);
+```
