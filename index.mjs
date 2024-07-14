@@ -15,11 +15,11 @@ export function exportToPDF(data, path) {
   if (!dataErrors.valid) throw Error(`Data is not valid: ${dataErrors.toString()}`);
 
   const printer = new PdfMake({
-    Roboto: {
-      normal: "fonts/Roboto-Regular.ttf",
-      bold: "fonts/Roboto-Medium.ttf",
-      italics: "fonts/Roboto-Italic.ttf",
-      bolditalics: "fonts/Roboto-MediumItalic.ttf",
+    Times: {
+      normal: 'Times-Roman',
+      bold: 'Times-Bold',
+      italics: 'Times-Italic',
+      bolditalics: 'Times-BoldItalic'
     },
   });
 
@@ -103,6 +103,7 @@ export function exportToPDF(data, path) {
     ],
     defaultStyle: {
       lineHeight: 1.2,
+      font: 'Times'
     },
     styles: {
       header: {
