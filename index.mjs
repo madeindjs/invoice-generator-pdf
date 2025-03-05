@@ -1,4 +1,6 @@
+/// <reference types="./index.d.ts" />
 import dayjs from "dayjs";
+
 import { validate } from "jsonschema";
 import { createWriteStream } from "node:fs";
 import PdfMake from "pdfmake";
@@ -7,19 +9,20 @@ import jsonSchema from "./schema.json" with { type: "json" };
 
 /**
  *
- * @param {import("./model").InvoiceData} data
+ * @param {import("./model.d.ts").InvoiceData} data
  * @param {string} path
  */
 export function exportToPDF(data, path) {
   const dataErrors = validate(data, jsonSchema);
-  if (!dataErrors.valid) throw Error(`Data is not valid: ${dataErrors.toString()}`);
+  if (!dataErrors.valid)
+    throw Error(`Data is not valid: ${dataErrors.toString()}`);
 
   const printer = new PdfMake({
     Times: {
-      normal: 'Times-Roman',
-      bold: 'Times-Bold',
-      italics: 'Times-Italic',
-      bolditalics: 'Times-BoldItalic'
+      normal: "Times-Roman",
+      bold: "Times-Bold",
+      italics: "Times-Italic",
+      bolditalics: "Times-BoldItalic",
     },
   });
 
@@ -54,7 +57,11 @@ export function exportToPDF(data, path) {
       [
         { text: "Billed to", alignment: "right", italics: true },
         { text: data.recipient.name, alignment: "right" },
-        { text: data.recipient.address, alignment: "right", marginBottom: marginSeparator },
+        {
+          text: data.recipient.address,
+          alignment: "right",
+          marginBottom: marginSeparator,
+        },
       ],
       separator,
       { text: `Invoice n° ${data.id}`, headlineLevel: 1, style: "header" },
@@ -99,11 +106,15 @@ export function exportToPDF(data, path) {
       "Discount for early payment: none.",
       "Cash payment on receipt of invoice.",
       "Method of payment : By bank transfer to the following address",
-      { text: data.bankInformations, alignment: "center", marginTop: marginSeparator },
+      {
+        text: data.bankInformations,
+        alignment: "center",
+        marginTop: marginSeparator,
+      },
     ],
     defaultStyle: {
       lineHeight: 1.2,
-      font: 'Times'
+      font: "Times",
     },
     styles: {
       header: {

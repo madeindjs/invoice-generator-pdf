@@ -16,7 +16,10 @@ You need to defined as a JSON file like [this example](./example.json)
     "email": "me@example.com",
     "website": "https://example.com"
   },
-  "recipient": { "name": "ACME", "address": "1 avenue des Champs Elysée, 75001, Paris" },
+  "recipient": {
+    "name": "ACME",
+    "address": "1 avenue des Champs Elysée, 75001, Paris"
+  },
   "fromDate": "2024-06-10",
   "toDate": "2024-07-07",
   "issueDate": "2024-07-11T08:18:45.748Z",
@@ -36,6 +39,13 @@ It will generate a PDF like [the following example](./example.json.pdf).
 
 ## Usage
 
+```sh
+npm install invoice-generator-pdf
+yarn add invoice-generator-pdf
+pnpm add invoice-generator-pdf
+deno install jsr:@mandeindjs/invoice-generator-pdf
+```
+
 ### CLI
 
 ```sh
@@ -53,6 +63,6 @@ await exportToPDF(
   {
     /* your conf */
   },
-  "./out.pdf"
+  "./out.pdf",
 );
 ```
