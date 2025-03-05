@@ -1,6 +1,6 @@
 {
   "name": "@madeindjs/invoice-generator-pdf",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "exports": "./index.mjs",
   "imports": {
     "dayjs": "npm:dayjs@^1.11.11",
